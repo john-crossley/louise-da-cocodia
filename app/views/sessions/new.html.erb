@@ -1,0 +1,35 @@
+<div class="page container">
+
+	<% if flash.any? %>
+		<% flash.each do |key, value| %>
+			<p class="feedback <%= key %>"><%= value %></p>
+		<% end %>
+	<% end %>
+
+	<div class="login-section">
+
+		<h2> Login to Louise Da-Cocodia </h2>
+
+		<p> To access the administrator panel enter your login information. If you have
+		forgotten your information, please use the <%= link_to 'forgot password', '#' %> page. If you
+		do not have an account you must contact one of the system administrators. </p>
+
+		<p class="note">Please note this area is not intended for public use.</p>
+
+		<%= form_for(:session, url: sessions_path) do |f| %>
+			<p>
+				<%= f.label :username %>
+				<%= f.text_field :username %>
+			</p>
+			<p>
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+			</p>
+			<p>
+				<%= f.button "Login", class: 'button' %>
+			</p>
+		<% end %>
+
+	</div><!--//login-section-->
+
+</div><!--//page-->

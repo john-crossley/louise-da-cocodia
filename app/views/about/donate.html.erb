@@ -1,0 +1,78 @@
+<div id="about" class="page">
+
+	<div class="eleven columns">
+		<div class="inner-about">
+
+			<h2> Donate to our Foundation </h2>
+
+			<div class="about-image">
+				<%= image_tag 'http://placehold.it/640x200', size: '640x200', alt: 'About Louise Da-Cocodia Image' %>
+			</div><!--//about-image-->
+
+			<h3> How you can Support our Trust </h3>
+
+			<p>
+				The Trust is committed to the advancement of the educational performances and achievements of African-Caribbean heritage students in schools, colleges and universities.
+			</p>
+
+			<p>
+				To aid the continuing work of Louise Da-Cocodia in the field of education, donations
+				can be made to:
+			</p>
+
+			<address>
+				<p>
+					<strong>The Louise Da-Cocodia Education Trust</strong><br>
+					<span>4 Westerling Way</span><br>
+					<span>Moss Side, Manchester</span><br>
+					<strong>M16 7EA</strong>
+					<br>
+					<br>
+					<span class="email"><strong>Email: </strong><%= mail_to 'ldet.info@gmail.com' %></span>
+				</p>
+			</address>
+
+			<p class="note"> To secure almost a third extra from the Government opt to gift aid your donation. </p>
+
+		</div><!--//inner-about-->
+	</div><!--//-->
+
+	<div class="four columns sidebar">
+		<h2> Sidebar </h2>
+		<p>
+			If you'd like to become more involved with our foundation, please check out the links below.
+		</p>
+
+		<h3> Search </h3>
+		<form action="#">
+			<p><input type="text" name="search"></p>
+			<p><button class="button">Search</button></p>
+		</form>
+
+		<h3> More Links </h3>
+		<ul>
+			<li><%= link_to 'Donate', about_donate_path %></li>
+			<li><%= link_to 'Objectives', about_objectives_path %></li>
+			<li><%= link_to 'Volunteering', about_volunteering_path %></li>
+		</ul>
+
+		<h3>Recent Posts</h3>
+		<div class="blog-recent-sidebar">
+			<div class="blog-item">
+				<h5> Hello, Louise! </h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
+			</div>
+
+			<div class="blog-item">
+				<h5> A New Start </h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
+			</div>
+
+			<div class="blog-item">
+				<h5> First Post! </h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
+			</div>
+		</div>
+	</div><!--//-->
+
+</div><!--//page-->

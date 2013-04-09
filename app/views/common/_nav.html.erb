@@ -1,0 +1,24 @@
+<nav>
+	<ul>
+		<li <%= raw "class='current'" if params[:controller] == 'home' %> >
+			<%= link_to 'Home', root_path %>
+		</li>
+		<li <%= raw "class='current'" if params[:controller] == 'about' && params[:action] != 'history' %>>
+			<%= link_to 'About', about_path %>
+			<ul>
+				<li><%= link_to 'Donate', about_donate_path %></li>
+				<li><%= link_to 'Objectives', about_objectives_path %></li>
+				<li><%= link_to 'Volunteering', about_volunteering_path %></li>
+			</ul>
+		</li>
+		<li <%= raw "class='current'" if params[:controller] == 'blog' %>>
+			<%= link_to 'Blog', '#' %>
+		</li>
+		<li <%= raw "class='current'" if params[:action] == 'history' %>>
+			<%= link_to 'History', about_history_path %>
+		</li>
+		<li <%= raw "class='current'" if params[:controller] == 'contact' %>>
+			<%= link_to 'Contact', contact_path %>
+		</li>
+	</ul>
+</nav>

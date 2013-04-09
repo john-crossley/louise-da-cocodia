@@ -1,0 +1,69 @@
+<div id="about" class="page">
+
+	<div class="eleven columns">
+		<div class="inner-about">
+
+			<h2> Our Objectives </h2>
+
+			<div class="about-image">
+				<%= image_tag 'http://placehold.it/640x200', size: '640x200', alt: 'About Louise Da-Cocodia Image' %>
+			</div><!--//about-image-->
+
+			<h3> The Aims and Objectives of the Trust </h3>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, non magnam amet dolores beatae incidunt natus sequi id enim sit qui ullam nostrum assumenda consequatur dolore. Nemo provident molestias voluptatibus!
+			</p>
+
+			<ul>
+				<li> Identify and address barriers to education, training and employment for African-Caribbean heritage students </li>
+				<li> Undertake research that will influence both local and national policies for the benefit of African-Caribbean heritage students </li>
+				<li> Enable parents to access information and develop skills to increase their active involvement in the education of their children </li>
+				<li> Work in partnership with local colleges, universities and businesses in the provision of mentors and employment opportunities </li>
+				<li> Work in partnership with a range of community organisations and schools in the delivery of supplementary educational programmes, for example, the Saturday School </li>
+			</ul>
+
+			<p class="note"> If you would like to help us achieve some of these goals why not <%= link_to 'volunteer?', about_volunteering_path %> </p>
+
+		</div><!--//inner-about-->
+	</div><!--//-->
+
+	<div class="four columns sidebar">
+		<h2> Sidebar </h2>
+		<p>
+			If you'd like to become more involved with our foundation, please check out the links below.
+		</p>
+
+		<h3> Search </h3>
+		<form action="#">
+			<p><input type="text" name="search"></p>
+			<p><button class="button">Search</button></p>
+		</form>
+
+		<h3> More Links </h3>
+		<ul>
+			<li><%= link_to 'Donate', about_donate_path %></li>
+			<li><%= link_to 'Objectives', about_objectives_path %></li>
+			<li><%= link_to 'Volunteering', about_volunteering_path %></li>
+		</ul>
+
+		<h3>Recent Posts</h3>
+		<div class="blog-recent-sidebar">
+			<div class="blog-item">
+				<h5> Hello, Louise! </h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
+			</div>
+
+			<div class="blog-item">
+				<h5> A New Start </h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
+			</div>
+
+			<div class="blog-item">
+				<h5> First Post! </h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
+			</div>
+		</div>
+	</div><!--//-->
+
+</div><!--//page-->
