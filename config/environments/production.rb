@@ -20,6 +20,8 @@ LouiseDaCocodia::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.assets.initialize_on_precompile = true
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
@@ -60,6 +62,7 @@ LouiseDaCocodia::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
