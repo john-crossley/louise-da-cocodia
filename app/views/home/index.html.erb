@@ -1,11 +1,11 @@
 <div class="page">
 
 			<div class="royalslider">
-				<%= image_tag 'http://placehold.it/920x300' %>
+				<%= image_tag 'main-image.png', size: '920x300', alt: 'Louise Da-Cocodia Image' %>
 			</div>
 
 			<div class="sub_heading">
-				<h2> Welcome to Louise Da-Cocodia </h2>
+				<h2> Welcome to our Home </h2>
 				<span class="line"></span>
 				<h3> We are an amazing charity, come and find out who we are and what we do. </h3>
 			</div><!--//sub_heading-->
@@ -20,7 +20,7 @@
 							what we do and we would love your help, support and care.
 							To find out more hit the button below.
 						</p>
-						<a href="#" class="button">Find out More</a>
+            <%= link_to 'Find out more', about_objectives_path, class: 'button' %>
 					</div><!--//inner-block-->
 				</div><!--//one-third-->
 
@@ -31,7 +31,7 @@
 							We help those at the heart of our community. So if your someone who needs
 							the <span>Louise Da-Cocodia</span> foundation to help then your in the right place.
 						</p>
-						<a href="#" class="button">Find out More</a>
+            <%= link_to 'Find out more', about_path, class: 'button' %>
 					</div><!--//inner-block-->
 				</div><!--//one-third-->
 
@@ -42,7 +42,7 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, eveniet,
 							aspernatur itaque similique ratione magnam eius assumenda.
 						</p>
-						<a href="#" class="button">Find out More</a>
+            <%= link_to 'Find out more', about_volunteering_path, class: 'button' %>
 					</div><!--//inner-block-->
 				</div><!--//one-third-->
 
@@ -74,38 +74,20 @@
 					<h4> From the Blog </h4>
 					<span class="line"></span>
 
-					<div class="blog-list-item">
-						<h5> The Foundation - <small>
-							<strong>By</strong> <%= link_to 'John Crossley', '#' %> on 4th April 2013</small> </h5>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, harum, alias, rem, molestias quos eius animi assumenda accusamus doloremque laudantium aliquam modi molestiae.
-						</p>
-						<div class="links">
-							<%= link_to 'Continue Reading »', '' %>
-						</div><!--//links-->
-					</div><!--//blog-list-item-->
-
-					<div class="blog-list-item">
-						<h5> The Foundation - <small>
-							<strong>By</strong> <%= link_to 'John Crossley', '#' %> on 4th April 2013</small> </h5>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, harum, alias, rem, molestias quos eius animi assumenda accusamus doloremque laudantium aliquam modi molestiae.
-						</p>
-						<div class="links">
-							<%= link_to 'Continue Reading »', '' %>
-						</div><!--//links-->
-					</div><!--//blog-list-item-->
-
-					<div class="blog-list-item">
-						<h5> The Foundation - <small>
-							<strong>By</strong> <%= link_to 'John Crossley', '#' %> on 4th April 2013</small> </h5>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, harum, alias, rem, molestias quos eius animi assumenda accusamus doloremque laudantium aliquam modi molestiae.
-						</p>
-						<div class="links">
-							<%= link_to 'Continue Reading »', '' %>
-						</div><!--//links-->
-					</div><!--//blog-list-item-->
+					<% if @posts.any? %>
+						<% @posts.each do |post| %>
+							<div class="blog-list-item">
+								<h5> <%= post.title %> <small>
+									<strong>By</strong> <%= post.user.username.capitalize %> on <%= post.created_at.strftime("%B %d, %Y") %></small> </h5>
+								<p> <%= raw truncate(post.body, length: 150) %> </p>
+								<div class="links">
+									<%= link_to 'Continue Reading »', "#{blog_path}/id/#{post.id}" %>
+								</div><!--//links-->
+							</div><!--//blog-list-item-->
+						<% end %>
+					<% else %>
+						<p> No posts have been made. </p>
+					<% end %>
 
 				</div><!--//one-third-->
 
@@ -137,7 +119,11 @@
 						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
 					</div><!--//event-item-->
 
-					<%= link_to 'View Events »', '#' %>
+					<div class="event-item">
+						<div class="date"><span>22</span> May</div>
+						<h5> Afternoon Meetup </h5>
+						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
+					</div><!--//event-item-->
 
 				</div><!--//one-third-->
 

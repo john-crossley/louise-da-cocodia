@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     # page_title
     # This allows us to have a dynamic page title.
     def page_title
-      (@content_for_title + " - " if @content_for_title).to_s + " Louise Da-Cocodia "
+      (@content_for_title + " - " if @content_for_title).to_s + " The Louise Da-Cocodia Education Trust"
     end
 
   	def login(user)

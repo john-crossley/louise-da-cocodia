@@ -33,7 +33,9 @@
 			<aside class="user-section">
 				<ul>
 					<% if logged_in? %>
-						<span>Welcome, </span> <%= link_to "#{current_user.username.capitalize}", '#' %> |
+						<span>Welcome, </span> <%= "#{current_user.username.capitalize}" %> |
+						<%= link_to 'Add Post', blog_new_path %> |
+						<%= link_to 'Add Event', '' %> |
 						<%= link_to 'Logout?', logout_path, method: :delete %>
 					<% else %>
 						<li> <%= link_to 'login', login_path %> </li>
@@ -45,8 +47,11 @@
 
 	<section class="page_heading home row">
 		<div class="logo container">
-			<%= link_to 'Louise Da-Cocodia', root_path %>
-			<span class="tag_line">Making Education a Priority</span>
+			<h1>
+				<%= image_tag 'small-logo.png', size: '52x53', alt: 'Louise Da-Cocodia Logo' %>
+				<%= link_to 'Louise Da-Cocodia', root_path %>
+				<span class="tag_line">Making Education a Priority</span>
+			</h1>
 		</div><!--//logo container-->
 	</section>
 
@@ -88,7 +93,7 @@
 						<strong>The Louise Da-Cocodia Education Trust</strong><br>
 						<span>4 Westerling Way</span><br>
 						<span>Moss Side, Manchester</span><br>
-						<strong>M16 7EA</strong>
+						<span>M16 7EA</span>
 					</p>
 				</address>
 			</div><!--//one-third column-->

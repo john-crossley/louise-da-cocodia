@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   def self.public_posts(params)
   	# Post.where(public: true).paginate(page: params[:page])
   	# page: params[:page], order: 'created_at DESC', per_page: 3
-  	where(public: true)
+  	where(public: true).order('created_at DESC')
   end
 
 end

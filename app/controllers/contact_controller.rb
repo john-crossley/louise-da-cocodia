@@ -1,5 +1,6 @@
 class ContactController < ApplicationController
 	def new
+    @content_for_title = "Contact"
 	end
 
 	def dispatch_email

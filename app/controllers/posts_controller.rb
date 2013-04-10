@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def single_post
     @post = Post.find(params[:id])
+    @content_for_title = "#{@post.title}"
   end
 
   def index
@@ -13,11 +14,13 @@ class PostsController < ApplicationController
 
     # Grab all public posts.
     # @posts = Post.public_posts(params);
-    @posts = Post.all
+    # @posts = Post.where(public: false)
+    @posts = Post.order('created_at DESC')
   end
 
   def new
     @post = Post.new
+    @content_for_title = "Add a new post"
   end
 
   def create

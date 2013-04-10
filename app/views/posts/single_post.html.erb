@@ -1,6 +1,6 @@
 <div class="page">
 
-	<%= image_tag "large-#{@post.image}" %>
+	<%= image_tag "large-#{@post.image}", size: '920x300' %>
 
 	<div class="sub_heading">
 		<h2> <%= @post.title %> </h2>
@@ -8,7 +8,7 @@
 	</div><!--//sub_heading-->
 
 	<div class="blog">
-		<%= @post.body %>
+		<%= raw @post.body %>
 	</div><!--//blog-->
 
 </div><!--//page-->

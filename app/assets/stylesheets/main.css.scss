@@ -139,6 +139,12 @@ header {
 
 	.logo {
 		padding-top: 8px;
+		h1 img {
+			float: left;
+			position: relative;
+			top: 10px;
+			margin-right: 10px;
+		}
 		a {
       font-size: 40px;
       font-family: 'Bitter', sans-serif;
@@ -146,7 +152,10 @@ header {
 			color: #fff;
 			text-decoration: none;
 			float: left;
-      margin: 30px 25px 0 0;
+      margin: 15px 20px 0 0;
+		}
+		span {
+			font-style: italic;
 		}
 	}
 	.tag_line {
@@ -219,8 +228,10 @@ span.highlight {
 .royalslider {
 	width: 100%;
 	height: 300px;
-	background: #ddd;
 	margin-bottom: 20px;
+	img {
+		border-radius: 5px;
+	}
 }
 
 .donation {
@@ -271,7 +282,6 @@ span.highlight {
 		// font-family: "Pacifico";
 		font-size: 24px;
 		margin-bottom: 10px;
-		text-decoration: underline;
 	}
 
 	.blog {
@@ -600,10 +610,10 @@ hr {
 		border: none;
 		background: #69799a;
 	}
-	&:active {
-		border: none;
-		background: #69799a;
-	}
+	// &:active {
+	// 	border: none;
+	// 	background: #69799a;
+	// }
 }
 
 p.note {

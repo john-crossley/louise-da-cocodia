@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20130410091220) do
 
   create_table "posts", :force => true do |t|
     t.integer  "user_id"
-    t.string   "image",      :default => "no-image.png"
+    t.string   "image",      :default => "no-image.gif"
     t.string   "title"
     t.text     "body"
     t.boolean  "public",     :default => false

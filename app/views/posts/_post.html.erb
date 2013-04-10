@@ -9,7 +9,7 @@
 					by <%= post.user.username.capitalize %> on <%= post.created_at.strftime("%B %d, %Y") %>
 				</small>
 			</h3>
-			<p> <%= truncate(post.body, length: 300) %> </p>
+			<p> <%= raw truncate(post.body, length: 300) %> </p>
 			<div class="options">
 				<ul>
 					<li> <%= link_to 'Read', "#{blog_path}/id/#{post.id}" %> </li>
