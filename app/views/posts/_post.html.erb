@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="two-thirds column">
+		<div class="single-blog">
+			<div class="single-blog-image">
+				<%= image_tag post.image, size: '620x200', alt: "#{post.title} Image" %>
+			</div><!--//single-blog-image-->
+			<h3> <%= post.title %>
+				<small class="author">
+					by <%= post.user.username.capitalize %> on <%= post.created_at.strftime("%B %d, %Y") %>
+				</small>
+			</h3>
+			<p> <%= truncate(post.body, length: 300) %> </p>
+			<div class="options">
+				<ul>
+					<li> <%= link_to 'Read', "#{blog_path}/id/#{post.id}" %> </li>
+					<% if logged_in? %>
+						<li> <%= link_to 'Edit', '#' %> </li>
+						<li> <%= link_to 'Delete', '#', confirm: 'Would you like to delete this?' %> </li>
+					<% end %>
+				</ul>
+			</div><!--//options-->
+		</div><!--//single-blog-->
+	</div><!--//two-thirds columns-->
+</div><!--//row-->

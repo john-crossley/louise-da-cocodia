@@ -11,8 +11,8 @@
 				<li><%= link_to 'Volunteering', about_volunteering_path %></li>
 			</ul>
 		</li>
-		<li <%= raw "class='current'" if params[:controller] == 'blog' %>>
-			<%= link_to 'Blog', '#' %>
+		<li <%= raw "class='current'" if params[:controller] == 'posts' %>>
+			<%= link_to 'Blog', blog_path %>
 		</li>
 		<li <%= raw "class='current'" if params[:action] == 'history' %>>
 			<%= link_to 'History', about_history_path %>

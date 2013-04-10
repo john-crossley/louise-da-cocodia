@@ -1,0 +1,27 @@
+<div class="page">
+
+	<%= image_tag 'blog.jpg', size: '920x300', alt: 'Our Blog Page' %>
+
+	<div class="sub_heading">
+		<h2> Louise Da-Cocodia Blog </h2>
+		<span class="line"></span>
+	</div><!--//sub_heading-->
+
+	<div class="row">
+		<p class="note"> Welcome to The Louise Da-Cocodia blog. Here is where we can keep our members
+		upto date and informed about what we're doing. Feel free to browse through our blog and read
+		what it is we have been upto. </p>
+	</div><!--//row-->
+
+	<div class="blog">
+		<% if @posts.any? %>
+			<%= render @posts %>
+		<% else %>
+			<p> No blog entries have been made at this time.. </p>
+			<% if logged_in? %>
+				<p> Would you like to <%= link_to 'create one', blog_new_path %>? </p>
+			<% end %>
+		<% end %>
+	</div><!--//blog-->
+
+</div><!--//page-->

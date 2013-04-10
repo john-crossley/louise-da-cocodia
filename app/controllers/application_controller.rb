@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
 
   protected
 
+    def authenticate
+      # Redirect user to login if not logged in.
+      redirect_to login_url, alert: 'You must login to access this page' unless logged_in?
+    end
+
     # page_title
     # This allows us to have a dynamic page title.
     def page_title

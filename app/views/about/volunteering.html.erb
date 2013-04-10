@@ -16,18 +16,18 @@
 			</p>
 
 			<ul>
-				<li> Teaching </li>
-				<li> Mentoring </li>
-				<li> Supporting and Coaching </li>
+				<li>1) Teaching </li>
+				<li>2) Mentoring </li>
+				<li>3) Supporting and Coaching </li>
 			</ul>
 
 			<h3> What will I get out of Volunteering? </h3>
 			<p> You will have the oppertunity to: </p>
 
 			<ul>
-				<li> Be part of a team comprising of teachers, parents, students and trustees </li>
-				<li> Work with children and young people within a community-based setting </li>
-				<li> Develop your practice as a trainee teacher or youth and community worker </li>
+				<li>1) Be part of a team comprising of teachers, parents, students and trustees </li>
+				<li>2) Work with children and young people within a community-based setting </li>
+				<li>3) Develop your practice as a trainee teacher or youth and community worker </li>
 			</ul>
 
 			<p class="note"> Okay, I'm in I want to <%= link_to 'signup!', about_volunteering_path %> </p>
@@ -36,41 +36,7 @@
 	</div><!--//-->
 
 	<div class="four columns sidebar">
-		<h2> Sidebar </h2>
-		<p>
-			If you'd like to become more involved with our foundation, please check out the links below.
-		</p>
-
-		<h3> Search </h3>
-		<form action="#">
-			<p><input type="text" name="search"></p>
-			<p><button class="button">Search</button></p>
-		</form>
-
-		<h3> More Links </h3>
-		<ul>
-			<li><%= link_to 'Donate', about_donate_path %></li>
-			<li><%= link_to 'Objectives', about_objectives_path %></li>
-			<li><%= link_to 'Volunteering', about_volunteering_path %></li>
-		</ul>
-
-		<h3>Recent Posts</h3>
-		<div class="blog-recent-sidebar">
-			<div class="blog-item">
-				<h5> Hello, Louise! </h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
-			</div>
-
-			<div class="blog-item">
-				<h5> A New Start </h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
-			</div>
-
-			<div class="blog-item">
-				<h5> First Post! </h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
-			</div>
-		</div>
-	</div><!--//-->
+		<%= render 'common/sidebar' %>
+	</div><!--//four columns-->
 
 </div><!--//page-->

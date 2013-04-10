@@ -11,8 +11,9 @@
 /* #Site Styles
 ================================================== */
 body {
-	font-size: 13px;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font: normal 13px Helvetica, sans-serif;
+	// font-size: 13px;
+	// font-family: Helvetica, sans-serif;
 	background: #f7f7f7;
 }
 
@@ -332,9 +333,9 @@ span.highlight {
 		margin-bottom: 5px;
 	}
 
-	h2 {
-		text-decoration: underline;
-	}
+	// h2 {
+	// 	text-decoration: underline;
+	// }
 
 	ul {
 		margin: 0;
@@ -399,6 +400,14 @@ span.highlight {
 
 .sidebar {
 
+	.sidebar-image {
+		width: 100%;
+		height: 200px;
+		img {
+			border-radius: 3px;
+		}
+	}
+
 	h3 {
 		border-bottom: 1px dotted #69799a;
 	}
@@ -446,6 +455,39 @@ span.highlight {
 	}
 }
 
+// BLOG
+.blog {
+	.single-blog {
+		// border-bottom: 1px solid #ddd;
+		padding-bottom: 10px;
+		img {
+			border-radius: 4px;
+		}
+		.author {
+			position: relative;
+			bottom: 2px;
+			left: 5px;
+		}
+		.options {
+			margin-top: 10px;
+			border-top: 1px dotted #69799a;
+			padding-top: 5px;
+		}
+		.options ul li {
+			display: inline;
+			margin-right: 3px;
+			a {
+				text-decoration: none;
+				font: normal 14px 'Bitter';
+				color: #69799a;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
 footer {
 	padding-top: 30px;
 	border-top: 1px solid #c9c9c9;
@@ -463,7 +505,6 @@ footer {
 		// font-family: 'Pacifico';
 		font-size: 18px;
 		color: #69799a;
-		text-decoration: underline;
 		margin-bottom: 10px;
 	}
 

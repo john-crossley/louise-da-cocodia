@@ -20,11 +20,17 @@
 				Although the Trust is no longer a provider of small bursaries, over the years its activities include amongst others, the establishment of a Saturday Supplementary School, the organisation of Educational conferences and research to:
 			</p>
 
-			<ul>
-				<li>Understand the educational needs of Black-Caribbean young men and developing pathways and action for improvement.</li>
-				<li>Explore the particular experiences of young Black-Caribbean origin who have been excluded from school.</li>
-				<li>Develop and implement aspiration and engagement strategies for working with young Black-Caribbean men.</li>
-			</ul>
+			<p class="note">
+				Understand the educational needs of Black-Caribbean young men and developing pathways and action for improvement.
+			</p>
+
+			<p class="note">
+				Explore the particular experiences of young Black-Caribbean origin who have been excluded from school.
+			</p>
+
+			<p class="note">
+				Develop and implement aspiration and engagement strategies for working with young Black-Caribbean men.
+			</p>
 
 			<p>
 				Following the death of Louise Da-Cocodia on the 13th March 2008, the decision was made to re-name Cariocca Education Trust in her honour.  This was also in recognition of her involvement in the establishment of organisations in areas of health, housing, education and enterprise.
@@ -34,41 +40,7 @@
 	</div><!--//-->
 
 	<div class="four columns sidebar">
-		<h2> Sidebar </h2>
-		<p>
-			If you'd like to become more involved with our foundation, please check out the links below.
-		</p>
-
-		<h3> Search </h3>
-		<form action="#">
-			<p><input type="text" name="search"></p>
-			<p><button class="button">Search</button></p>
-		</form>
-
-		<h3> More Links </h3>
-		<ul>
-			<li><%= link_to 'Donate', about_donate_path %></li>
-			<li><%= link_to 'Objectives', about_objectives_path %></li>
-			<li><%= link_to 'Volunteering', about_volunteering_path %></li>
-		</ul>
-
-		<h3>Recent Posts</h3>
-		<div class="blog-recent-sidebar">
-			<div class="blog-item">
-				<h5> Hello, Louise! </h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
-			</div>
-
-			<div class="blog-item">
-				<h5> A New Start </h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
-			</div>
-
-			<div class="blog-item">
-				<h5> First Post! </h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit... <%= link_to '[Read]', '#' %></p>
-			</div>
-		</div>
-	</div><!--//-->
+		<%= render 'common/sidebar' %>
+	</div><!--//four columns-->
 
 </div><!--//page-->

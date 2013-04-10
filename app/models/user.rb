@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  
+  has_many :posts
 
   attr_accessible :email, :fullname, :password, :password_confirmation, :username
 
