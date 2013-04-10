@@ -24,7 +24,7 @@ $(document).ready( function() {
 		// twitter stream
 		$('#twitter').tweet({
 			username: 'jonnothebonno',
-			count: 2,
+			count: 3,
 			retweets: false,
 			loading_text: 'Loading tweets...'
 		});
