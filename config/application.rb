@@ -57,6 +57,8 @@ module LouiseDaCocodia
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    config.assets.initialize_on_precompile = false
+
     # Don't generate any asset files.
     config.generators.stylesheets = false;
     config.generators.javascripts = false;
