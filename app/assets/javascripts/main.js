@@ -9,15 +9,16 @@ $(document).ready( function() {
 			currentSliderValue.html("£" + this.value);
 		});
 
-		$('.year-list ul li').hover( function() {
+		$('.timeline ul li').hover( function() {
 			$this = $(this);
+
 			$this.animate({
-				fontSize: '24px'
-			}, 100);
+				fontSize: '22px'
+			}, 200);
 		}, function() {
 			$this.animate({
-				fontSize: '12px'
-			}, 100);
+				fontSize: '14px'
+			}, 200);
 		});
 
 		// twitter stream
