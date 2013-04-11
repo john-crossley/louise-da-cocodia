@@ -24,6 +24,11 @@
 	<!--// Favicon -->
 	<%= favicon_link_tag 'favicon.ico' %>
 
+	<%=
+	# Render the google analytics partial if we are in production mode.
+	render 'common/google_analytics' if Rails.env == 'production'
+	%>
+
 </head>
 <body>
 
@@ -86,7 +91,7 @@
 				<h5> Our Location </h5>
 				<p>
 					If you'd like to get in touch with us, you can simply use our
-					<%= link_to 'contact form', '#' %> or use the address provided.
+					<%= link_to 'contact form', contact_path %> or use the address provided.
 				</p>
 				<address>
 					<p>
