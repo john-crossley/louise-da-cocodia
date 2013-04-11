@@ -1,19 +1,26 @@
-// TODO: Added fonts?
-
+/**
+ * Hey Richard,
+ *
+ * I have imported getskeleton <www.getskeleton.com> which provides some basic CSS
+ * functionality including a reset and some basic media query rules.
+ *
+ * Look for the 'Johns code starts here.' section to find where my CSS starts.
+ *
+ * Once again I have used SASS thats why everything has been dumped into this one file.
+ *
+ * - Cheers John.
+ */
+@import 'base';
+@import 'skeleton';
 
 /* Table of Content
 ==================================================
-	#Site Styles
-	#Misc
-	#Media Queries
-	#Font-Face */
+	Johns code starts here.
 
 /* #Site Styles
 ================================================== */
 body {
 	font: normal 13px Helvetica, sans-serif;
-	// font-size: 13px;
-	// font-family: Helvetica, sans-serif;
 	background: #f7f7f7;
 }
 
