@@ -242,6 +242,13 @@ span.highlight {
 }
 
 .donation {
+	#donation-feedback {
+		font-size: 14px;
+		display: none;
+		color: red;
+		display: block;
+		margin-bottom: 10px;
+	}
 	padding-top: 10px;
 	border: 1px solid #e5e5e5;
 	background: #f8f8f6;

@@ -5,8 +5,24 @@ $(document).ready( function() {
 		// Slider functionality
 		var currentSliderValue = $('.right-range');
 
+		// Trigger when the slider has changed.
 		$('#slider').on('change', function() {
-			currentSliderValue.html("£" + this.value);
+
+			var amount = parseInt($('#slider').val());
+
+			// If the user is using an older browser then
+			// rather than a slider the user will be presented with a text field.
+			//
+			// The user could then enter anything other than a number, and thats where this
+			// check comes in.
+			if ( isNaN(amount) ) {
+				// Show the user text and tell them they have been bad! Bit weird?
+				$('#donation-feedback').text("You must enter a number please!").fadeIn();
+				// Reset the amount to 0
+    		amount = 0;
+			}
+			// Show the user the current value when changed.
+			currentSliderValue.html("£" + amount );
 		});
 
 		$('.timeline ul li').hover( function() {
