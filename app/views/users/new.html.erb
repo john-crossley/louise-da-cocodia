@@ -1,28 +1,53 @@
-<h1> Register </h1>
+<div class="page container">
 
-<%= form_for(@user) do |f| %>
-	<%= render 'common/form_errors', obj: @user %>
-	<p>
-		<%= f.label :fullname, 'Full Name' %><br>
-		<%= f.text_field :fullname %>
-	</p>
-	<p>
-		<%= f.label :username %><br>
-		<%= f.text_field :username %>
-	</p>
-	<p>
-		<%= f.label :email %><br>
-		<%= f.email_field :email %>
-	</p>
-	<p>
-		<%= f.label :password %><br>
-		<%= f.password_field :password %>
-	</p>
-	<p>
-		<%= f.label :password_confirmation %><br>
-		<%= f.password_field :password_confirmation %>
-	</p>
-	<p>
-		<%= f.submit "Register" %>
-	</p>
-<% end %>
+	<% if flash.any? %>
+		<% flash.each do |key, value| %>
+			<p class="feedback <%= key %>"><%= value %></p>
+		<% end %>
+	<% end %>
+
+	<div class="register-section">
+
+		<h2> Register to Louise Da-Cocodia </h2>
+
+		<p class="note">
+			You may register a new user.
+		</p>
+
+		<% if logged_in? %>
+			<%= form_for(@user) do |f| %>
+				<%= render 'common/form_errors', obj: @user %>
+				<p>
+					<%= f.label :fullname, 'Full Name' %><br>
+					<%= f.text_field :fullname %>
+				</p>
+				<p>
+					<%= f.label :username %><br>
+					<%= f.text_field :username %>
+				</p>
+				<p>
+					<%= f.label :email %><br>
+					<%= f.email_field :email %>
+				</p>
+				<p>
+					<%= f.label :password %><br>
+					<%= f.password_field :password %>
+				</p>
+				<p>
+					<%= f.label :password_confirmation %><br>
+					<%= f.password_field :password_confirmation %>
+				</p>
+				<p>
+					<%= f.submit "Register" %>
+				</p>
+			<% end %>
+		<% else %>
+			<p class="note">
+				Registration is not open to the public. So if you would like to create
+				and account then please login as a member of staff.
+			</p>
+		<% end %>
+
+	</div><!--//register-section-->
+
+</div><!--//page-->

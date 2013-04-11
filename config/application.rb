@@ -60,6 +60,10 @@ module LouiseDaCocodia
     config.assets.initialize_on_precompile = false
 
     # Don't generate any asset files.
+    #
+    # The reason for this is because when ever a new controller/view is made rails
+    # will generate a seperate stylesheet. This is good and then we can compile it into
+    # one main sheet at the end. But of course I didn't think of this (I am new to rails)
     config.generators.stylesheets = false;
     config.generators.javascripts = false;
 

@@ -12,10 +12,10 @@ class UsersController < ApplicationController
 
   	if @user.save
       # Send the user a welcome email.
-      UserMailer.welcome_email(@user).deliver
+      # UserMailer.welcome_email(@user).deliver
 
   		# If saving the user was successful
-  		flash[:success] = "Thanks for registering #{@user.save}!"
+  		flash[:success] = "Thanks for registering #{@user.username}!"
   		# Redirect the user once they have logged in.
   		redirect_to root_url
   	else
