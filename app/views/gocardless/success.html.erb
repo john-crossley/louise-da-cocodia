@@ -1,0 +1,39 @@
+<div id="donation-success-page" class="page">
+
+  <div class="sub_heading">
+    <h2> Thank you for your donation </h2>
+    <span class="line"></span>
+  </div><!--//sub_heading-->
+
+  <div class="payment row">
+
+    <p class="bigger">
+      Everyone at The Louise Da-Cocodia wants to thank you from the bottom
+      of our hearts! 100% of your donation will be given to the charity, and
+      your money will help make a differnce to our young peoples lives.
+    </p>
+
+    <hr>
+
+    <p class="center note"> Please allow the The Louise Da-Cocodia to remember who you are?
+    we promise not to share your information with anyone! </p>
+
+    <%= form_for :donation do |f| %>
+      <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :message %>
+        <%= f.text_area :message %>
+      </p>
+      <p><%= f.button 'Add my details', class: 'button' %></p>
+    <% end %>
+
+  </div><!--//payment row-->
+
+</div><!--//page-->

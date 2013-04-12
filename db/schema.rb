@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410091220) do
+ActiveRecord::Schema.define(:version => 20130412100321) do
+
+  create_table "donations", :force => true do |t|
+    t.string   "name"
+    t.integer  "amount"
+    t.string   "email"
+    t.boolean  "anonymous",  :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.text     "message"
+  end
 
   create_table "posts", :force => true do |t|
     t.integer  "user_id"

@@ -38,12 +38,12 @@ $(document).ready( function() {
 		});
 
 		// twitter stream
-		$('#twitter').tweet({
-			username: 'jonnothebonno',
-			count: 3,
-			retweets: false,
-			loading_text: 'Loading tweets...'
-		});
+		// $('#twitter').tweet({
+		// 	username: 'jonnothebonno',
+		// 	count: 3,
+		// 	retweets: false,
+		// 	loading_text: 'Loading tweets...'
+		// });
 
 
 		$("header nav ul li").hover(function() {

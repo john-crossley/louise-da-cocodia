@@ -56,15 +56,17 @@
 						<br><small> Fancy helping us out? Why not donate? Every penny goes toward the charity </small></h3>
 
 					<small id="donation-feedback"></small>
-					<div class="donation-slider">
-						<div class="price left-range">£0</div>
-						<input type="range" id="slider" min="0" max="100" value="50">
-						<div class="price right-range">£100</div>
-					</div><!--//donation-slider-->
+					<form method="post" action="/home/gocardless">
+						<div class="donation-slider">
+							<div class="price left-range">£0</div>
+								<input type="range" id="slider" name="amount" min="0" max="100" value="3">
+							<div class="price right-range">£3</div>
+							</div><!--//donation-slider-->
 
-					<h4> So far you have helped to raise <strong>£39,021</strong> </h4>
+							<h4> So far you have helped to raise <strong>£39,021</strong> </h4>
 
-					<%= link_to 'Donate Now!', '#', class: 'button' %>
+							<button class="button">Donate!</button>
+						</form>
 
 				</div><!--//inner donation-->
 			</div><!--//row-->

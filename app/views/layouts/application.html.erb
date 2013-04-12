@@ -35,41 +35,24 @@
 	<header>
 		<div class="container">
 			<%= render 'common/nav' %>
-			<aside class="user-section">
-				<ul>
-					<% if logged_in? %>
-						<span>Welcome, </span> <%= "#{current_user.username.capitalize}" %> |
-						<%= link_to 'Add Post', blog_new_path %> |
-						<%= link_to 'Add Event', '' %> |
-						<%= link_to 'Logout?', logout_path, method: :delete %>
-					<% else %>
-						<li> <%= link_to 'login', login_path %> </li>
-					<% end %>
-				</ul>
-			</aside>
 		</div><!--//container-->
 	</header>
 
 	<section class="page_heading home row">
-		<div class="logo container">
+		<div id="logo" class="container">
 			<h1>
-				<%= image_tag 'small-logo.png', size: '52x53', alt: 'Louise Da-Cocodia Logo' %>
-				<%= link_to 'Louise Da-Cocodia', root_path %>
+				<%= link_to( image_tag('small-logo.png', size: '52x53', alt: 'Louise Da-Cocodia Logo') + 'Louise Da-Cocodia', root_path) %>
 				<span class="tag_line">Making Education a Priority</span>
 			</h1>
 		</div><!--//logo container-->
 	</section>
 
-	<div id="home" class="page_wrapper">
-		<section class="container">
+	<div class="container">
 
-			<%=
-			# Here is the magic of rails Richard. We call the yield method and this
-			# is where all of our contect located in the views file will be loaded.
-			yield
-			%>
+		<div id="page">
 
-		</section><!--//container-->
+		</div><!--//page-->
+
 	</div><!--//home page_wrapper-->
 
 	<footer>
