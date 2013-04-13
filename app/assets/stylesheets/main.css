@@ -840,6 +840,19 @@ header {
     header nav ul li.current ul li a {
       background: none; }
 
+#page_heading {
+  background: #69799a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 65px;
+  height: 360px; }
+  #page_heading span.tag {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold; }
+
 /* #Logo
 ================================================== */
 #logo {
@@ -854,6 +867,7 @@ header {
     margin-right: 10px; }
 
 /* #Generic Styles
+ * Generic CSS used across a majority of pages.
 ================================================== */
 #page {
   border: 1px solid #c8c9c9;
@@ -863,48 +877,19 @@ header {
   padding: 20px;
   overflow: hidden;
   margin: 90px auto 20px auto;
-  min-height: 240px; }
-  #page .about .one-third {
+  min-height: 240px;
+  /**
+   * Styling elements that are inside of the
+   * page div.
+   */ }
+  #page .home .one-third {
+    max-width: 90%;
     border: 1px solid #e5e5e5;
-    margin: 0 0 0 5px;
+    margin: 5px 3px;
     background: #f8f8f6;
     height: 200px;
     text-align: center;
     border-radius: 3px; }
-    #page .about .one-third h4 {
-      text-align: center; }
-
-.page_heading {
-  background: #69799a;
-  width: 100%;
-  height: 90px; }
-  .page_heading .logo {
-    padding-top: 8px; }
-    .page_heading .logo h1 img {
-      float: left;
-      position: relative;
-      top: 10px;
-      margin-right: 10px; }
-    .page_heading .logo a {
-      font-size: 40px;
-      font-family: 'Bitter', sans-serif;
-      text-shadow: 0 2px rgba(0, 0, 0, 0.36);
-      color: #fff;
-      text-decoration: none;
-      float: left;
-      margin: 15px 20px 0 0; }
-    .page_heading .logo span {
-      font-style: italic; }
-  .page_heading .tag_line {
-    font: 15px 'Bitter';
-    color: #fff;
-    display: inline-block;
-    margin-top: 35px; }
-
-.page_heading.home {
-  position: absolute;
-  top: 65px;
-  height: 360px; }
 
 .page_wrapper {
   background: #f9f9f9;
@@ -941,9 +926,9 @@ span.highlight {
   padding: 2px;
   border-radius: 3px; }
 
-.about .one-third .inner-block {
+.home .one-third .inner-block {
   padding: 10px; }
-  .about .one-third .inner-block p {
+  .home .one-third .inner-block p {
     font-size: 14px; }
 
 .royalslider {
@@ -1130,14 +1115,14 @@ span.highlight {
 /* #Footer
 ================================================== */
 footer {
-  padding-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid #c9c9c9;
   background: #fff;
   text-align: center; }
   footer .one-third {
-    height: 150px;
+    height: 200px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-align: left; }
   footer h5 {
     text-align: center;
@@ -1300,6 +1285,9 @@ textarea {
 /* All Mobile Sizes (devices and browser) */
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .home .one-third {
+    width: 85% !important; } }
 /* #Font-Face
 ================================================== */
 /**

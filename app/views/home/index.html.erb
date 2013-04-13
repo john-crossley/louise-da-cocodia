@@ -1,135 +1,119 @@
-<div class="page">
+<div class="royalslider">
+	<%= image_tag 'main-image1.png', size: '920x300', alt: 'Louise Da-Cocodia Image' %>
+</div>
 
-			<div class="royalslider">
-				<%= image_tag 'main-image.png', size: '920x300', alt: 'Louise Da-Cocodia Image' %>
-			</div>
+<div class="sub_heading">
+	<h2> Welcome to our Home </h2>
+	<span class="line"></span>
+	<h3> We are an amazing charity, come and find out who we are and what we do. </h3>
+</div><!--//sub_heading-->
 
-			<div class="sub_heading">
-				<h2> Welcome to our Home </h2>
-				<span class="line"></span>
-				<h3> We are an amazing charity, come and find out who we are and what we do. </h3>
-			</div><!--//sub_heading-->
+<div class="home container">
 
-			<div class="about container">
+	<div class="one-third column">
+		<div class="inner-block">
+			<h4> <i class="icon">b</i> Love Charity </h4>
+			<p>
+				Help us make a difference to real peoples lives. We love
+				what we do and we would love your help, support and care.
+				To find out more hit the button below.
+			</p>
+      <%= link_to 'Louise\'s Objectives', about_objectives_path, class: 'button' %>
+		</div><!--//inner-block-->
+	</div><!--//one-third-->
 
-				<div class="one-third column">
-					<div class="inner-block">
-						<h4> <i class="icon">b</i> Love Charity </h4>
-						<p>
-							Help us make a difference to real peoples lives. We love
-							what we do and we would love your help, support and care.
-							To find out more hit the button below.
-						</p>
-            <%= link_to 'Louise\'s Objectives', about_objectives_path, class: 'button' %>
-					</div><!--//inner-block-->
-				</div><!--//one-third-->
+	<div class="one-third column">
+		<div class="inner-block">
+			<h4> <i class="icon">o</i> Community </h4>
+			<p>
+				We help those at the heart of our community. So if your someone who needs
+				the <span>Louise Da-Cocodia</span> foundation to help then your in the right place.
+			</p>
+      <%= link_to 'Our Community', about_path, class: 'button' %>
+		</div><!--//inner-block-->
+	</div><!--//one-third-->
 
-				<div class="one-third column">
-					<div class="inner-block">
-						<h4> <i class="icon">o</i> Community </h4>
-						<p>
-							We help those at the heart of our community. So if your someone who needs
-							the <span>Louise Da-Cocodia</span> foundation to help then your in the right place.
-						</p>
-            <%= link_to 'Our Community', about_path, class: 'button' %>
-					</div><!--//inner-block-->
-				</div><!--//one-third-->
+	<div class="one-third column">
+		<div class="inner-block">
+			<h4> <i class="icon">l</i> Get Involved </h4>
+			<p>
+				We would love for you to get involved with our foundation. If you have some spare time then why not
+				see how you can help us help others?
+			</p>
+      <%= link_to 'Get Volunteering!', about_volunteering_path, class: 'button' %>
+		</div><!--//inner-block-->
+	</div><!--//one-third-->
 
-				<div class="one-third column">
-					<div class="inner-block">
-						<h4> <i class="icon">l</i> Get Involved </h4>
-						<p>
-							We would love for you to get involved with our foundation. If you have some spare time then why not
-							see how you can help us help others?
-						</p>
-            <%= link_to 'Get Volunteering!', about_volunteering_path, class: 'button' %>
-					</div><!--//inner-block-->
-				</div><!--//one-third-->
+</div><!--//container-->
 
-			</div><!--//container-->
+<hr>
 
-			<hr>
+<div class="row donation">
+	<div class="inner-donation">
+		<h3> Donate to the Louise Da-Cocodia Foundation
+			<br><small> Fancy helping us out? Why not donate? Every penny goes toward the charity </small></h3>
 
-			<div class="row donation">
-				<div class="inner-donation">
-					<h3> Donate to the Louise Da-Cocodia Foundation
-						<br><small> Fancy helping us out? Why not donate? Every penny goes toward the charity </small></h3>
+		<small id="donation-feedback"></small>
+		<form method="post" action="/home/gocardless">
+			<div class="donation-slider">
+				<div class="price left-range">£0</div>
+					<input type="range" id="slider" name="amount" min="0" max="100" value="3">
+				<div class="price right-range">£3</div>
+				</div><!--//donation-slider-->
 
-					<small id="donation-feedback"></small>
-					<form method="post" action="/home/gocardless">
-						<div class="donation-slider">
-							<div class="price left-range">£0</div>
-								<input type="range" id="slider" name="amount" min="0" max="100" value="3">
-							<div class="price right-range">£3</div>
-							</div><!--//donation-slider-->
+				<h4> So far you have helped to raise <strong>£39,021</strong> </h4>
 
-							<h4> So far you have helped to raise <strong>£39,021</strong> </h4>
+				<button class="button">Donate!</button>
+			</form>
 
-							<button class="button">Donate!</button>
-						</form>
+	</div><!--//inner donation-->
+</div><!--//row-->
 
-				</div><!--//inner donation-->
-			</div><!--//row-->
+<div class="information container">
 
-			<div class="information container">
+	<div class="blog two-thirds column">
+		<h4> From the Blog </h4>
+		<span class="line"></span>
 
-				<div class="blog two-thirds column">
-					<h4> From the Blog </h4>
-					<span class="line"></span>
+		<% if @posts.any? %>
+			<% @posts.each do |post| %>
+				<div class="blog-list-item">
+					<h5> <%= post.title %> <small>
+						<strong>By</strong> <%= post.user.username.capitalize %> on <%= post.created_at.strftime("%B %d, %Y") %></small> </h5>
+					<p> <%= raw truncate(post.body, length: 150) %> </p>
+					<div class="links">
+						<%= link_to 'Continue Reading »', "#{blog_path}/id/#{post.id}" %>
+					</div><!--//links-->
+				</div><!--//blog-list-item-->
+			<% end %>
+		<% else %>
+			<p> No posts have been made. </p>
+		<% end %>
 
-					<% if @posts.any? %>
-						<% @posts.each do |post| %>
-							<div class="blog-list-item">
-								<h5> <%= post.title %> <small>
-									<strong>By</strong> <%= post.user.username.capitalize %> on <%= post.created_at.strftime("%B %d, %Y") %></small> </h5>
-								<p> <%= raw truncate(post.body, length: 150) %> </p>
-								<div class="links">
-									<%= link_to 'Continue Reading »', "#{blog_path}/id/#{post.id}" %>
-								</div><!--//links-->
-							</div><!--//blog-list-item-->
-						<% end %>
-					<% else %>
-						<p> No posts have been made. </p>
-					<% end %>
+	</div><!--//one-third-->
 
-				</div><!--//one-third-->
+	<div class="events one-third column">
+		<h4> Our Events </h4>
+		<span class="line"></span>
 
-				<div class="events one-third column">
-					<h4> Our Events </h4>
-					<span class="line"></span>
+		<div class="event-item">
+			<div class="date"><span>22</span> May</div>
+			<h5> Afternoon Meetup </h5>
+			<p> <strong>3pm</strong> at Piccadilly Gardens </p>
+		</div><!--//event-item-->
 
-					<div class="event-item">
-						<div class="date"><span>22</span> May</div>
-						<h5> Afternoon Meetup </h5>
-						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
-					</div><!--//event-item-->
+		<div class="event-item">
+			<div class="date"><span>22</span> May</div>
+			<h5> Afternoon Meetup </h5>
+			<p> <strong>3pm</strong> at Piccadilly Gardens </p>
+		</div><!--//event-item-->
 
-					<div class="event-item">
-						<div class="date"><span>22</span> May</div>
-						<h5> Afternoon Meetup </h5>
-						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
-					</div><!--//event-item-->
+		<div class="event-item">
+			<div class="date"><span>22</span> May</div>
+			<h5> Afternoon Meetup </h5>
+			<p> <strong>3pm</strong> at Piccadilly Gardens </p>
+		</div><!--//event-item-->
 
-					<div class="event-item">
-						<div class="date"><span>22</span> May</div>
-						<h5> Afternoon Meetup </h5>
-						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
-					</div><!--//event-item-->
+	</div><!--//one-third-->
 
-					<div class="event-item">
-						<div class="date"><span>22</span> May</div>
-						<h5> Afternoon Meetup </h5>
-						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
-					</div><!--//event-item-->
-
-					<div class="event-item">
-						<div class="date"><span>22</span> May</div>
-						<h5> Afternoon Meetup </h5>
-						<p> <strong>3pm</strong> at Piccadilly Gardens </p>
-					</div><!--//event-item-->
-
-				</div><!--//one-third-->
-
-			</div><!--//row-->
-
-		</div><!--//page-->
+</div><!--//row-->

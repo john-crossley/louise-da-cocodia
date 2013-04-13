@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!--// Meta Information -->
-	<meta charset="utf-8">
-	<title> <%= page_title %> </title>
-	<meta name="description" content="">
-	<meta name="author" content="John Crossley">
+  <!--// Meta Information -->
+  <meta charset="utf-8">
+  <title> <%= page_title %> </title>
+  <meta name="description" content="">
+  <meta name="author" content="John Crossley">
 
-	<!--// Mobile Specific -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--// Mobile Specific -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!--// CSS -->
-	<%= stylesheet_link_tag    "application", :media => "all" %>
+  <!--// CSS -->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
 
-	<!--// Protect from CSRF -->
-	<%= csrf_meta_tags %>
+  <!--// Protect from CSRF -->
+  <%= csrf_meta_tags %>
 
-	<!--// Get the shim on the scene -->
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <!--// Get the shim on the scene -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-	<!--// Favicon -->
-	<%= favicon_link_tag 'favicon.ico' %>
+  <!--// Favicon -->
+  <%= favicon_link_tag 'favicon.ico' %>
 
-	<%=
-	# Render the google analytics partial if we are in production mode.
-	render 'common/google_analytics' if Rails.env == 'production'
-	%>
+  <%=
+  # Render the google analytics partial if we are in production mode.
+  render 'common/google_analytics' if Rails.env == 'production'
+  %>
 
 </head>
 <body>
 
-	<header>
-		<div class="container">
-			<%= render 'common/nav' %>
-		</div><!--//container-->
-	</header>
+  <header>
+    <div class="container">
+      <%= render 'common/nav' %>
+    </div><!--//container-->
+  </header>
 
-	<section class="page_heading home row">
-		<div id="logo" class="container">
-			<h1>
-				<%= link_to( image_tag('small-logo.png', size: '52x53', alt: 'Louise Da-Cocodia Logo') + 'Louise Da-Cocodia', root_path) %>
-				<span class="tag_line">Making Education a Priority</span>
-			</h1>
-		</div><!--//logo container-->
-	</section>
+  <section id="page_heading" class="row">
+    <div id="logo" class="container">
+      <h1>
+        <%= link_to( image_tag('small-logo.png', size: '52x53', alt: 'Louise Da-Cocodia Logo') + 'Louise Da-Cocodia', root_path) %>
+        <span class="tag">Making Education a Priority</span>
+      </h1>
+    </div><!--//logo container-->
+  </section>
 
-	<div class="container">
+  <div class="container">
 
-		<div id="page">
+    <div id="page">
+    <!--
+    Richard
+    This is where the content is yielded,
+    so all the content from the individual pages
+    is pulled in.
+    -->
+    <%= yield %>
 
-		</div><!--//page-->
+    </div><!--//page-->
 
-	</div><!--//home page_wrapper-->
+  </div><!--//container-->
 
-	<footer>
-		<div class="container">
+  <footer>
+    <div class="container">
 
-			<div class="one-third column">
-				<h5> Charity Information </h5>
-				<p> To promote inclusion by increasing the opportunities for people from disadvantaged backgrounds, with particular reference to african caribbean's by providing structured projects which will have direct impact on the educational achievements of young people. </p>
+      <div class="one-third column">
+        <h5> Charity Information </h5>
+        <p> To promote inclusion by increasing the opportunities for people from disadvantaged backgrounds, with particular reference to african caribbean's by providing structured projects which will have direct impact on the educational achievements of young people. </p>
 
-				<p><strong>Registered Charity: <%= link_to '1085379', 'http://www.charity-commission.gov.uk/SHOWCHARITY/RegisterOfCharities/CharityWithoutPartB.aspx?RegisteredCharityNumber=1085379&SubsidiaryNumber=0' %></strong></p>
-			</div><!--//one-third column-->
+        <p><strong>Registered Charity: <%= link_to '1085379', 'http://www.charity-commission.gov.uk/SHOWCHARITY/RegisterOfCharities/CharityWithoutPartB.aspx?RegisteredCharityNumber=1085379&SubsidiaryNumber=0' %></strong></p>
+      </div><!--//one-third column-->
 
-			<div class="one-third column">
-				<h5> Our twitter Feed </h5>
-				<div id="twitter"></div>
-			</div><!--//one-third column-->
+      <div class="one-third column">
+        <h5> Our twitter Feed </h5>
+        <div id="twitter"></div>
+      </div><!--//one-third column-->
 
-			<div class="one-third column">
-				<h5> Our Location </h5>
-				<p>
-					If you'd like to get in touch with us, you can simply use our
-					<%= link_to 'contact form', contact_path %> or use the address provided.
-				</p>
-				<address>
-					<p>
-						<strong>The Louise Da-Cocodia Education Trust</strong><br>
-						<span>4 Westerling Way</span><br>
-						<span>Moss Side, Manchester</span><br>
-						<span>M16 7EA</span>
-					</p>
-				</address>
-			</div><!--//one-third column-->
+      <div class="one-third column">
+        <h5> Our Location </h5>
+        <p>
+          If you'd like to get in touch with us, you can simply use our
+          <%= link_to 'contact form', contact_path %> or use the address provided.
+        </p>
+        <address>
+          <p>
+            <strong>The Louise Da-Cocodia Education Trust</strong><br>
+            <span>4 Westerling Way</span><br>
+            <span>Moss Side, Manchester</span><br>
+            <span>M16 7EA</span>
+          </p>
+        </address>
+      </div><!--//one-third column-->
 
-			<div class="row copyright">
-				<small>
-					&copy; <%= Date.today.year %> -
-					The Louise Da-Cocodia Foundation -
-					All rights reserved. - by <%= link_to 'phpcodemonkey', 'http://phpcodemonkey.com/' %>
-				</small>
-			</div>
+      <div class="row copyright">
+        <small>
+          &copy; <%= Date.today.year %> -
+          The Louise Da-Cocodia Foundation -
+          All rights reserved. - by <%= link_to 'phpcodemonkey', 'http://phpcodemonkey.com/' %>
+        </small>
+      </div>
 
-		</div><!--//row container-->
+    </div><!--//row container-->
 
-	</footer>
+  </footer>
 
-	<%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>

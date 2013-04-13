@@ -91,6 +91,21 @@ header {
   } // end nav
 }
 
+#page_heading {
+  background: #69799a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 65px;
+  height: 360px;
+  span.tag {
+    color: #fff;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+  }
+}
+
 /* #Logo
 ================================================== */
 #logo {
@@ -108,6 +123,7 @@ header {
 }
 
 /* #Generic Styles
+ * Generic CSS used across a majority of pages.
 ================================================== */
 #page {
   border: 1px solid #c8c9c9;
@@ -121,58 +137,27 @@ header {
 
   min-height: 240px;
 
-  .about .one-third {
-    h4 {
-      text-align: center;
-    }
+  /**
+   * Styling elements that are inside of the
+   * page div.
+   */
+  .home .one-third {
+    max-width: 90%;
     border: 1px solid #e5e5e5;
-    margin: 0 0 0 5px;
+    margin: 5px 3px;
     background: #f8f8f6;
     height: 200px;
     text-align: center;
     border-radius: 3px;
+
+    // h4 {
+    //   text-align: center;
+    // }
   }
+
 }
 
-.page_heading {
-  background: #69799a;
-  width: 100%;
-  height: 90px;
 
-  .logo {
-    padding-top: 8px;
-    h1 img {
-      float: left;
-      position: relative;
-      top: 10px;
-      margin-right: 10px;
-    }
-    a {
-      font-size: 40px;
-      font-family: 'Bitter', sans-serif;
-      text-shadow: 0 2px rgba(0, 0, 0, 0.36);
-      color: #fff;
-      text-decoration: none;
-      float: left;
-      margin: 15px 20px 0 0;
-    }
-    span {
-      font-style: italic;
-    }
-  }
-  .tag_line {
-    font: 15px 'Bitter';
-    color: #fff;
-    display: inline-block;
-    margin-top: 35px;
-  }
-}
-
-.page_heading.home {
-  position: absolute;
-  top: 65px;
-  height: 360px;
-}
 
 .page_wrapper {
   background: #f9f9f9;
@@ -216,7 +201,7 @@ span.highlight {
   border-radius: 3px;
 }
 
-.about .one-third .inner-block {
+.home .one-third .inner-block {
   padding: 10px;
   p {
     font-size: 14px;
@@ -507,15 +492,15 @@ span.highlight {
 ================================================== */
 footer {
   // Some basic styling
-  padding-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid #c9c9c9;
   background: #fff;
   text-align: center;
 
   .one-third {
-    height: 150px;
+    height: 200px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     text-align: left;
   }
 
@@ -679,9 +664,6 @@ p.louise {
   height: auto;
   font-size: 24px;
   color: #69799a;
-  // .heart {
-
-  // }
 }
 
 // LOGIN
@@ -720,7 +702,11 @@ textarea {
   @media only screen and (min-width: 480px) and (max-width: 767px) {}
 
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-  @media only screen and (max-width: 479px) {}
+  @media only screen and (max-width: 479px) {
+    .home .one-third {
+      width: 85% !important;
+    }
+  }
 
 
 /* #Font-Face
