@@ -1,11 +1,5 @@
 <div class="page container">
 
-	<% if flash.any? %>
-		<% flash.each do |key, value| %>
-			<p class="feedback <%= key %>"><%= value %></p>
-		<% end %>
-	<% end %>
-
 	<div class="register-section">
 
 		<h2> Register to Louise Da-Cocodia </h2>
@@ -18,27 +12,27 @@
 			<%= form_for(@user) do |f| %>
 				<%= render 'common/form_errors', obj: @user %>
 				<p>
-					<%= f.label :fullname, 'Full Name' %><br>
+					<%= f.label :fullname, 'Full Name' %>
 					<%= f.text_field :fullname %>
 				</p>
 				<p>
-					<%= f.label :username %><br>
+					<%= f.label :username %>
 					<%= f.text_field :username %>
 				</p>
 				<p>
-					<%= f.label :email %><br>
+					<%= f.label :email %>
 					<%= f.email_field :email %>
 				</p>
 				<p>
-					<%= f.label :password %><br>
+					<%= f.label :password %>
 					<%= f.password_field :password %>
 				</p>
 				<p>
-					<%= f.label :password_confirmation %><br>
+					<%= f.label :password_confirmation %>
 					<%= f.password_field :password_confirmation %>
 				</p>
 				<p>
-					<%= f.submit "Register" %>
+					<%= f.button "Register", class: 'button' %>
 				</p>
 			<% end %>
 		<% else %>

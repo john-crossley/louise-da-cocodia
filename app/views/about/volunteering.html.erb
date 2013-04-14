@@ -1,42 +1,42 @@
-<div id="about" class="page">
+<div id="objectives" class="page container">
 
-	<div class="eleven columns">
-		<div class="inner-about">
+  <div class="two-thirds column">
 
-			<h2> Volunteering </h2>
+    <h2> Volunteering </h2>
 
-			<div class="about-image">
-				<%= image_tag 'volunteer.png', size: '640x200', alt: 'Volunteer for Louise Da-Cocodia Image' %>
-			</div><!--//about-image-->
+    <div class="page-image">
+      <%= image_tag 'volunteer.jpg', size: '640x200', alt: 'Volunteer for Louise Da-Cocodia Image' %>
+    </div>
 
-			<h3> I want to Volunteer. So what will I be Doing? </h3>
+    <h3> I want to Volunteer. So what will I be Doing? </h3>
 
-			<p>
-				As a volunteer with the Mrs D’s Supplementary school, you will have the opportunity to become involved with a range of educational, cultural and personal development activities. These may include:
-			</p>
+    <p>
+      As a volunteer with the Mrs D’s Supplementary school, you will have the opportunity to become involved with a range of educational, cultural and personal development activities. These may include:
+    </p>
 
-			<ul>
-				<li>1) Teaching </li>
-				<li>2) Mentoring </li>
-				<li>3) Supporting and Coaching </li>
-			</ul>
+    <ul>
+      <li>1) Teaching </li>
+      <li>2) Mentoring </li>
+      <li>3) Supporting and Coaching </li>
+    </ul>
 
-			<h3> What will I get out of Volunteering? </h3>
-			<p> You will have the opportunity to: </p>
+    <h3> What will I get out of Volunteering? </h3>
+    <p> You will have the opportunity to: </p>
 
-			<ul>
-				<li>1) Be part of a team comprising of teachers, parents, students and trustees </li>
-				<li>2) Work with children and young people within a community-based setting </li>
-				<li>3) Develop your practice as a trainee teacher or youth and community worker </li>
-			</ul>
+    <ul>
+      <li>1) Be part of a team comprising of teachers, parents, students and trustees </li>
+      <li>2) Work with children and young people within a community-based setting </li>
+      <li>3) Develop your practice as a trainee teacher or youth and community worker </li>
+    </ul>
 
-			<p class="note"> Okay, I'm in I want to <%= link_to 'signup!', about_volunteering_path %> </p>
+    <p class="note">
+      Okay, I'm in. <%= link_to 'Find out more', contact_path %>
+    </p>
 
-		</div><!--//inner-about-->
-	</div><!--//-->
+  </div><!--//two-thirds columns-->
 
-	<div class="four columns sidebar">
-		<%= render 'common/sidebar' %>
-	</div><!--//four columns-->
+  <aside class="one-third column sidebar">
+    <%= render 'common/sidebar' %>
+  </aside><!--//one-third columns sidebar-->
 
-</div><!--//page-->
+</div><!--//about-->

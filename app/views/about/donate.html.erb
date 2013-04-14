@@ -1,44 +1,52 @@
-<div id="about" class="page">
+<div id="donate" class="page container">
 
-	<div class="eleven columns">
-		<div class="inner-about">
+  <div class="two-thirds column">
 
-			<h2> Donate to our Foundation </h2>
+    <h2> Donate to our Foundation </h2>
 
-			<div class="about-image">
-				<%= image_tag 'charity-donate.jpg', size: '640x200', alt: 'Donate to Louise Da-Cocodia Foundation' %>
-			</div><!--//about-image-->
+    <div class="page-image">
+      <%= image_tag 'charity-donate.jpg', size: '640x200', alt: 'Donate to Louise Da-Cocodia Foundation' %>
+    </div>
 
-			<h3> How you can Support our Trust </h3>
+    <h3> How you can Support our Trust </h3>
 
-			<p>
-				The Trust is committed to the advancement of the educational performances and achievements of African-Caribbean heritage students in schools, colleges and universities.
-			</p>
+    <p>
+      The Trust is committed to the advancement of the educational performances and achievements of African-Caribbean heritage students in schools, colleges and universities.
+    </p>
 
-			<p>
-				To aid the continuing work of Louise Da-Cocodia in the field of education, donations
-				can be made to:
-			</p>
+    <p>
+      To aid the continuing work of Louise Da-Cocodia in the field of education, donations
+      can be made to:
+    </p>
 
-			<address>
-				<p>
-					<strong>The Louise Da-Cocodia Education Trust</strong><br>
-					<span>4 Westerling Way</span><br>
-					<span>Moss Side, Manchester</span><br>
-					<strong>M16 7EA</strong>
-					<br>
-					<br>
-					<span class="email"><strong>Email: </strong><%= mail_to 'ldet.info@gmail.com' %></span>
-				</p>
-			</address>
+    <address>
+      <p>
+        <strong>The Louise Da-Cocodia Education Trust</strong><br>
+        <span>4 Westerling Way</span><br>
+        <span>Moss Side, Manchester</span><br>
+        <span>M16 7EA</span>
+        <br>
+        <br>
+        <span class="email"><strong>Email: </strong><%= mail_to 'ldet.info@gmail.com' %></span>
+      </p>
+    </address>
 
-			<p class="note"> To secure almost a third extra from the Government opt to gift aid your donation. </p>
+    <p class="note"> To secure almost a third extra from the Government opt to gift aid your donation. </p>
 
-		</div><!--//inner-about-->
-	</div><!--//-->
+    <hr>
 
-	<div class="four columns sidebar">
-		<%= render 'common/sidebar' %>
-	</div><!--//four columns-->
+    <p class="bigger">
+      Did you know? You can also donate online using a secure online payment gateway?
+    </p>
 
-</div><!--//page-->
+    <p>
+      <%= link_to 'Donate Online', '/#donate', class: 'button' %>
+    </p>
+
+  </div><!--//two-thirds columns-->
+
+  <aside class="one-third column sidebar">
+    <%= render 'common/sidebar' %>
+  </aside><!--//one-third columns sidebar-->
+
+</div><!--//about-->

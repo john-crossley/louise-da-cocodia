@@ -1,35 +1,45 @@
-<div id="about" class="page">
+<div id="objectives" class="page container">
 
-	<div class="eleven columns">
-		<div class="inner-about">
+  <div class="two-thirds column">
 
-			<h2> Our Objectives </h2>
+    <h2> Our Objectives </h2>
 
-			<div class="about-image">
-				<%= image_tag 'our-objectives.png', size: '640x200', alt: 'Our Objectives' %>
-			</div><!--//about-image-->
+    <div class="page-image">
+      <%= image_tag 'our-objectives.jpg', size: '640x200', alt: 'Our Objectives' %>
+    </div>
 
-			<h3> The Aims and Objectives of the Trust </h3>
+    <h3> The Aims and Objectives of the Trust </h3>
 
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, non magnam amet dolores beatae incidunt natus sequi id enim sit qui ullam nostrum assumenda consequatur dolore. Nemo provident molestias voluptatibus!
-			</p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, non magnam amet dolores beatae incidunt natus sequi id enim sit qui ullam nostrum assumenda consequatur dolore. Nemo provident molestias voluptatibus!
+      </p>
 
-			<ul>
-				<li>1) Identify and address barriers to education, training and employment for African-Caribbean heritage students </li>
-				<li>2) Undertake research that will influence both local and national policies for the benefit of African-Caribbean heritage students </li>
-				<li>3) Enable parents to access information and develop skills to increase their active involvement in the education of their children </li>
-				<li>4) Work in partnership with local colleges, universities and businesses in the provision of mentors and employment opportunities </li>
-				<li>5) Work in partnership with a range of community organisations and schools in the delivery of supplementary educational programmes, for example, the Saturday School </li>
-			</ul>
+      <p class="note">
+        Identify and address barriers to education, training and employment for African-Caribbean heritage students
+      </p>
 
-			<p class="note"> If you would like to help us achieve some of these goals why not <%= link_to 'volunteer?', about_volunteering_path %> </p>
+      <p class="note">
+        Undertake research that will influence both local and national policies for the benefit of African-Caribbean heritage students
+      </p>
 
-		</div><!--//inner-about-->
-	</div><!--//-->
+      <p class="note">
+        Enable parents to access information and develop skills to increase their active involvement in the education of their children
+      </p>
 
-	<div class="four columns sidebar">
-		<%= render 'common/sidebar' %>
-	</div><!--//four columns-->
+      <p class="note">
+        Work in partnership with local colleges, universities and businesses in the provision of mentors and employment opportunities
+      </p>
 
-</div><!--//page-->
+      <p class="note">
+        Work in partnership with a range of community organisations and schools in the delivery of supplementary educational programmes, for example, the Saturday School
+      </p>
+
+      <p> If you would like to help us achieve some of these goals why not <%= link_to 'volunteer?', about_volunteering_path %> </p>
+
+  </div><!--//two-thirds columns-->
+
+  <aside class="one-third column sidebar">
+    <%= render 'common/sidebar' %>
+  </aside><!--//one-third columns sidebar-->
+
+</div><!--//about-->

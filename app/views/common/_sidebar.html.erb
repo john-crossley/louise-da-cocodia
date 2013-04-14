@@ -1,26 +1,34 @@
-<h2> Sidebar </h2>
+<div class="inner-sidebar">
+	<h2> More </h2>
 
-<div class="sidebar-image">
-	<%= image_tag 'louise-da-cocodia.jpg' %>
-</div><!--//sidebar-image-->
+	<div class="sidebar-image">
+	  <%= image_tag 'louise-da-cocodia.jpg', size: '220x200', alt: 'Young Louise Da-Cocodia Graduation' %>
+	</div><!--//sidebar-image-->
 
-<p>
-	If you'd like to become more involved with our foundation, please check out the links below.
-</p>
+	<p>
+	  For more information on the Louise Da-Cocodia Education Trust, use the links
+	  below to navigate around our website.
+	</p>
 
-<h3> More Links </h3>
-<ul>
-	<li><%= link_to 'Donate', about_donate_path %></li>
-	<li><%= link_to 'Objectives', about_objectives_path %></li>
-	<li><%= link_to 'Volunteering', about_volunteering_path %></li>
-</ul>
+	<h3> More Links </h3>
+	<ul>
+	  <li><%= link_to 'Donate', about_donate_path %></li>
+	  <li><%= link_to 'Objectives', about_objectives_path %></li>
+	  <li><%= link_to 'Volunteering', about_volunteering_path %></li>
+	  <li><%= link_to 'History', about_history_path %></li>
+	</ul>
 
-<h3>Recent Posts</h3>
-<div class="blog-recent-sidebar">
-	<% @posts.each do |p| %>
-	<div class="blog-item">
-		<h5> <%= p.title %> </h5>
-		<p> <%= truncate(p.body, length: 90) %> <%= link_to '[read]', "#{blog_path}/id/#{p.id}" %> </p>
+	<h3>Recent Posts</h3>
+	<div class="blog-recent-sidebar">
+	  <% if @posts.any? %>
+	    <% @posts.each do |p| %>
+	    <div class="blog-item">
+	      <h5> <%= p.title %> </h5>
+	      <p> <%= raw truncate(p.body, length: 90) %> <%= link_to '[read]', "#{blog_path}/id/#{p.id}" %> </p>
+	    </div>
+	    <% end %>
+	  <% else %>
+	    <small> No posts have been made. </small>
+	  <% end %>
 	</div>
-	<% end %>
-</div>
+</div><!--//inner-sidebar-->

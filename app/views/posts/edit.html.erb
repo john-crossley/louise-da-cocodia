@@ -1,0 +1,40 @@
+<div class="page">
+
+  <div class="sub_heading">
+    <h2> Louise Da-Cocodia: New Blog Entry </h2>
+    <span class="line"></span>
+  </div><!--//sub_heading-->
+
+  <div class="row">
+    <% if logged_in? %>
+      <h3> Editing: <%= @post.title %> </h3>
+
+      <p> Posting a new blog entry is easy. Simply fill out the form below
+      and hit `submit`. Once you have, the blog post will be submitted
+      instantly and viewable by the public. </p>
+
+      <%= form_for(@post) do |f| %>
+        <%= render 'common/form_errors', obj: @post %>
+        <p>
+          <%= f.label :image %>
+          <%= f.file_field :image %>
+        </p>
+        <p>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </p>
+        <p>
+          <%= f.label :body %>
+          <%= f.text_area :body %>
+        </p>
+        <p>
+          <%= f.button 'Update', class: 'button' %>
+        </p>
+      <% end %>
+
+    <% else %>
+      <p> You must <%= link_to 'login', login_path %> to post a new blog entry. </p>
+    <% end %>
+  </div><!--//row-->
+
+</div><!--//page-->

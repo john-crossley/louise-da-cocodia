@@ -12,5 +12,6 @@
 //
 //= require_self
 //= require jquery
+//= require jquery_ujs
 //= require jquery.twitter
 //= require main

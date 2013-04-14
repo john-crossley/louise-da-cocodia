@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130412100321) do
+ActiveRecord::Schema.define(:version => 20130414213935) do
 
   create_table "donations", :force => true do |t|
     t.string   "name"
@@ -25,12 +25,14 @@ ActiveRecord::Schema.define(:version => 20130412100321) do
 
   create_table "posts", :force => true do |t|
     t.integer  "user_id"
-    t.string   "image",      :default => "no-image.gif"
     t.string   "title"
     t.text     "body"
-    t.boolean  "public",     :default => false
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.boolean  "public",             :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
   end
 
   add_index "posts", ["user_id"], :name => "index_posts_on_user_id"

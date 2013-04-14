@@ -1,27 +1,28 @@
-<div class="page">
+<div id="blog" class="page container">
 
-	<%= image_tag 'blog.jpg', size: '920x300', alt: 'Our Blog Page' %>
+  <div class="two-thirds column">
 
-	<div class="sub_heading">
-		<h2> Louise Da-Cocodia Blog </h2>
-		<span class="line"></span>
-	</div><!--//sub_heading-->
+    <h2> Louise Da-Cocodia Blog </h2>
 
-	<div class="row">
-		<p class="note"> Welcome to The Louise Da-Cocodia blog. Here is where we can keep our members
-		upto date and informed about what we're doing. Feel free to browse through our blog and read
-		what it is we have been upto. </p>
-	</div><!--//row-->
+    <div class="page-image">
+      <%= image_tag 'blog-header.jpg', size: '600x200', alt: 'About Louise Da-Cocodia Image' %>
+    </div>
 
-	<div class="blog">
-		<% if @posts.any? %>
-			<%= render @posts %>
-		<% else %>
-			<p> No blog entries have been made at this time.. </p>
-			<% if logged_in? %>
-				<p> Would you like to <%= link_to 'create one', blog_new_path %>? </p>
-			<% end %>
-		<% end %>
-	</div><!--//blog-->
+    <h3> Showing the latest blog entries. </h3>
 
-</div><!--//page-->
+    <% if @posts.any? %>
+      <%= render @posts %>
+    <% else %>
+      <p> No blog entries have yet been made. </p>
+      <% if logged_in? %>
+        <p><%= link_to 'Create one?', blog_new_path %></p>
+      <% end %>
+    <% end %>
+
+  </div><!--//two-thirds columns-->
+
+  <aside class="one-third column sidebar">
+    <%= render 'common/sidebar' %>
+  </aside><!--//one-third columns sidebar-->
+
+</div><!--//about-->
