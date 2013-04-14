@@ -82,7 +82,7 @@
 						<strong>By</strong> <%= post.user.username.capitalize %> on <%= post.created_at.strftime("%B %d, %Y") %></small> </h5>
 					<p> <%= raw truncate(post.body, length: 150) %> </p>
 					<div class="links">
-						<%= link_to 'Continue Reading »', "#{blog_path}/id/#{post.id}" %>
+						<%= link_to 'Continue Reading »', post %>
 					</div><!--//links-->
 				</div><!--//blog-list-item-->
 			<% end %>
