@@ -2,15 +2,18 @@
 	<%= render 'common/form_errors', obj: @post %>
 	<p>
 		<%= f.label :title %>
+		<small>Enter a suitable title for the blog article</small>
 		<%= f.text_field :title %>
 	</p>
 	<p>
 		<%= f.label :body %>
+		<small>Enter your article here... You may also use HTML</small>
 		<%= f.text_area :body, class: 'blog-textarea' %>
 	</p>
 	<p>
 		<%= f.label :image %>
-		<%= f.file_field :image %>
+		<%= f.file_field :image %><br>
+		<small>Recommended image size 600px by 200px</small>
 	</p>
 	<p>
 		<%= f.button 'Submit', class: 'button' %>

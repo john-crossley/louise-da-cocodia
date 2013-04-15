@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  
+
   has_many :posts
 
   attr_accessible :email, :fullname, :password, :password_confirmation, :username
@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   # Limit the username between 4 and 12 characters
   validates :username, length: { in: 4..12 }
   # Limit the length of chars in the password field.
-  validates :password, :password_confirmation, length: { in: 4..8 }
+  validates :password, :password_confirmation, length: { in: 4..8 }, on: :create
 
   # Enure the user has entered a valid email address
   validates_format_of :email, :with => /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i

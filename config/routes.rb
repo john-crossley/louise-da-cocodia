@@ -18,7 +18,7 @@ LouiseDaCocodia::Application.routes.draw do
   post 'home/gocardless', to: 'home#gocardless'
 
   # Allow us to access URLS like /users/new /users/create
-  resources :users, only:[:new, :create]
+  resources :users, only:[:new, :create, :edit, :update]
   resources :sessions, only:[:new, :create]
   resources :posts, except:[:new, :index]
 
@@ -28,7 +28,7 @@ LouiseDaCocodia::Application.routes.draw do
   match '/logout', to: 'sessions#destroy', method: :delete
   match '/blog', to: 'posts#index'
   match '/blog/new', to: 'posts#new'
-  match '/blog/id/:id', to: 'posts#single_post'
+  # match '/blog/id/:id', to: 'posts#single_post'
   match 'home/confirm-payment', to: 'home#confirm_payment'
 
 end
