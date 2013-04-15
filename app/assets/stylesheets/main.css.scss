@@ -592,10 +592,6 @@ hr {
     border: none;
     background: #69799a;
   }
-  // &:active {
-  //  border: none;
-  //  background: #69799a;
-  // }
 }
 
 p.note {
@@ -606,17 +602,17 @@ p.note {
 }
 
 p.feedback {
-  height: 30px;
+  height: 28px;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Bitter';
   padding: 8px 0 0 0;
   z-index: 100;
   width: 400px;
-  font-size: 18px;
-  box-shadow: #888 0 2px 4px 0;
+  box-shadow: #bbb 0 2px 4px 0;
   margin: 0 auto 20px auto;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 p.louise {
@@ -637,16 +633,13 @@ p.louise {
   border: 1px solid #337f09;
 }
 
+.notice {
+  background: #c6d8ee;
+  border: 1px solid #84a0c3;
+}
+
 /* #Misc
 ================================================== */
-// .clearfix::after {
-//   content: "John Crossley";
-//   clear: both;
-//   display: block;
-//   visibility: hidden;
-//   height: 0;
-// }
-
 .clearfix:before, .clearfix:after {
   content: "JohnCrossley";
   display: table;

@@ -2,6 +2,10 @@ $(document).ready( function() {
 
 	( function() {
 
+		$('.feedback').on('click', function() {
+			$(this).fadeOut();
+		});
+
 		// Slider functionality
 		var currentSliderValue = $('.right-range');
 
