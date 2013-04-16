@@ -1,7 +1,7 @@
 <div class="page">
 
   <div class="sub_heading">
-    <h2> Louise Da-Cocodia: New Blog Entry </h2>
+    <h2> Louise Da-Cocodia: Edit Blog Entry </h2>
     <span class="line"></span>
   </div><!--//sub_heading-->
 
@@ -9,9 +9,8 @@
     <% if logged_in? %>
       <h3> Editing: <%= @post.title %> </h3>
 
-      <p> Posting a new blog entry is easy. Simply fill out the form below
-      and hit `submit`. Once you have, the blog post will be submitted
-      instantly and viewable by the public. </p>
+      <p> To edit simply change the fields below if you don't want to change your post image
+      leave the field blank and it will not be updated. </p>
 
       <%= form_for(@post) do |f| %>
         <%= render 'common/form_errors', obj: @post %>

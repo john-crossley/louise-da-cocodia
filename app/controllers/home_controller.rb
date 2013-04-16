@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   	@content_for_title = "Home"
   	# @posts = Post.where('created_at DESC')
   	@posts = Post.all
+    @events = Event.order('created_at DESC').limit(3)
   end
 
   def gocardless
@@ -21,11 +22,11 @@ class HomeController < ApplicationController
 
   def confirm_payment
     @donation = Donation.new
+    # render 'gocardless/success'
+    GoCardless.confirm_resource params
     render 'gocardless/success'
-  #   GoCardless.confirm_resource params
-  #   render 'gocardless/success'
-  # rescue GoCardless::ApiError => e
-  #   render text: "Could not conform new subscription. Details #{e}"
+  rescue GoCardless::ApiError => e
+    render text: "Could not conform new subscription. Details #{e}"
   end
 
 end

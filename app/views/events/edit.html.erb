@@ -1,0 +1,43 @@
+<div class="page container">
+
+  <div class="event-section">
+
+    <h2> Editing Event: <%= @event.title %> </h2>
+
+    <p class="note">
+      Modify the fields of the event. Anything you don't want to change just leave.
+    </p>
+
+    <%= form_for(@event) do |f| %>
+      <%= render 'common/form_errors', obj: @event %>
+      <p>
+        <%= f.label :event_date, 'Date of Event' %>
+        <%= f.date_select :event_date %>
+      </p>
+      <p>
+        <%= f.label :event_time, 'Time of Event' %>
+        <%= f.time_select :event_time %>
+      </p>
+      <p>
+        <%= f.label :title %>
+        <small>Whats the name of the event?</small>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :location %>
+        <small>Where is the event? Eg: Piccadilly Manchester</small>
+        <%= f.text_field :location %>
+      </p>
+      <p>
+        <%= f.label :description %>
+        <small>Enter a short description about the event. Max chars 100</small>
+        <%= f.text_area :description %>
+      </p>
+      <p>
+        <%= f.button "Update Event", class: 'button' %>
+      </p>
+    <% end %>
+
+  </div><!--//event-section-->
+
+</div><!--//page-->

@@ -21,6 +21,7 @@ LouiseDaCocodia::Application.routes.draw do
   resources :users, only:[:new, :create, :edit, :update]
   resources :sessions, only:[:new, :create]
   resources :posts, except:[:new, :index]
+  resources :events, except:[:index]
 
   # Allow URLS like /login, /register, /logout
   match '/register', to: 'users#new'

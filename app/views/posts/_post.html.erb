@@ -1,7 +1,7 @@
 <div class="row">
 <div class="single-blog">
 		<div class="single-blog-image">
-			<%= image_tag post.image_file_name, size: '600x200', alt: "#{post.title} Image" %>
+			<%= image_tag post.image.url(:medium), size: '600x200', alt: "#{post.title} Image" %>
 		</div><!--//single-blog-image-->
 		<h3> <%= post.title %>
 			<small class="author">

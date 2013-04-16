@@ -303,6 +303,9 @@ header {
       border-bottom: 1px solid #ddd;
       width: 90%;
       margin-bottom: 10px;
+      p {
+        margin: 5px 0;
+      }
     }
     .date {
       width: 40px;
@@ -314,7 +317,7 @@ header {
       -moz-border-radius: 5px;
       border-radius: 5px;
       text-align: center;
-      margin-right: 10px;
+      margin-right: 5px;
       font-size: 12px;
       float: left;
       line-height: 13px;
@@ -451,23 +454,6 @@ header {
       position: relative;
       bottom: 2px;
       left: 5px;
-    }
-    .options {
-      margin-top: 10px;
-      border-top: 1px dotted #69799a;
-      padding-top: 5px;
-    }
-    .options ul li {
-      display: inline;
-      margin-right: 3px;
-      a {
-        text-decoration: none;
-        font: normal 14px 'Bitter';
-        color: #69799a;
-        &:hover {
-          text-decoration: underline;
-        }
-      }
     }
   }
 }
@@ -664,6 +650,23 @@ p.warning {
   color: #69799a;
 }
 
+.options {
+  margin: 5px 0 0 0;
+  padding: 5px 0 0 0;
+}
+.options ul li {
+  display: inline;
+  margin-right: 3px;
+  a {
+    text-decoration: none;
+    font: normal 12px 'Bitter';
+    color: #69799a;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 /* #Form
 ================================================== */
 textarea {
@@ -681,6 +684,13 @@ textarea {
   height: 200px;
   padding: 5px;
   font: normal 14px/20px 'Helvetica';
+}
+
+.event-section {
+  select {
+    display: inline-block;
+    width: 80px;
+  }
 }
 
 // LOGIN
