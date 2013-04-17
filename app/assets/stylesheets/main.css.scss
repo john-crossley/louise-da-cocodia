@@ -631,6 +631,10 @@ p.warning {
 
 /* #Misc
 ================================================== */
+.hidden {
+  display: none;
+}
+
 .clearfix:before, .clearfix:after {
   content: "JohnCrossley";
   display: table;

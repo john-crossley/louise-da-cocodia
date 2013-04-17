@@ -14,10 +14,15 @@
   <!--// Mobile Specific -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!--// CSS -->
+  <!--//
+  Richard: The styles are written in SASS and can be located here:
+  app/assets/stylsheets/ Just looks for 'Johns code starts here.'
+  -->
   <%= stylesheet_link_tag    "application", :media => "all" %>
 
-  <!--// Protect from CSRF -->
+  <!--//
+  Richard: This protects the application from cross site request forgery.
+  -->
   <%= csrf_meta_tags %>
 
   <!--// Get the shim on the scene -->
@@ -36,7 +41,16 @@
 </head>
 <body>
 
-  <header>
+  <!--//
+  Richard: Accessibility links visible to screen readers. -->
+  <div class="accessibility hidden">
+    <ul>
+      <li> <%= link_to 'Skip to navigation', '#nav' %> </li>
+      <li> <%= link_to 'Skip to content', '#content' %> </li>
+    </ul>
+  </div><!--//accessibility-->
+
+  <header id="nav">
     <div class="container">
       <%= render 'common/nav' %>
     </div><!--//container-->
@@ -51,7 +65,7 @@
     </div><!--//logo container-->
   </section>
 
-  <div class="container">
+  <div class="container" id="content" role="main">
     <div id="page">
 
     <% if flash.any? %>
