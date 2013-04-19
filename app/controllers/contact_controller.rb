@@ -4,8 +4,7 @@ class ContactController < ApplicationController
 	end
 
 	def dispatch_email
-
-		flash[:notice] = "Sent!"
+		flash[:notice] = "Application is currently in Demo"
 		redirect_to contact_path
 	end
 
