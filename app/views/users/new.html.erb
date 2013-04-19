@@ -8,7 +8,7 @@
 			You may register a new user.
 		</p>
 
-		<% if !logged_in? %>
+		<% if logged_in? %>
 			<%= form_for(@user) do |f| %>
 				<%= render 'common/form_errors', obj: @user %>
 				<p>

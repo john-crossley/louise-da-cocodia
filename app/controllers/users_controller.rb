@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  #before_filter :authenticate, only: [:create, :edit, :update]
+  before_filter :authenticate, only: [:create, :edit, :update]
 
   def new
   	# Create a new instance of the user
