@@ -1,0 +1,36 @@
+Hey Richard.
+
+APP SEREVR: http://desolate-springs-1581.herokuapp.com/
+OFFICIAL WEBSITE: http://www.louisedacocodiatrust.org.uk/
+
+OFFICIAL WEBSITE will soon point to APP SERVER the charity are in the process of
+getting the deatails.
+
+CSS FILE
+
+  - Located in louise-da-cococida/app/assets/stylesheets/main.css.scss
+
+This was developed using SASS the other files are getskeleton resets.
+
+JS FILE
+ - Located in louise-da-cococida/app/assets/javascripts/main.js
+
+HTML FILES
+  - Located in louise-da-cococida/app/views/
+
+  They have a .erb extension which stands for embedded ruby. Just open them up in
+  sublime text editor (or any other editor) to view the HTML code.
+
+  For a compiled output head to the website and view source.
+
+  The main HTML file is application.html.erb this has the doctype information in ETC.
+
+  The rest of the views are pulled in by application.html.erb such as the common/_nav.html.erb
+
+If you have any issued please contact me:
+hello@phpcodemonkey.com
+jonnysnip3r@gmail.com
+Skype: jonnothebonno
+Mob: 07598935460
+
+Thanks Richard.
